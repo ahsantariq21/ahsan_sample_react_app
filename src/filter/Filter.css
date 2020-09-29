@@ -1,0 +1,10 @@
+.float-dev{
+    float:left;
+}
+
+.center-align{
+    margin: auto;
+    width: 80%;
+    background-color: yellow;
+    color: black;
+}

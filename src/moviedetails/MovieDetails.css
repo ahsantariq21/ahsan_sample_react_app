@@ -1,0 +1,44 @@
+.key-style{
+    background-color: grey;
+    max-width: auto;
+}
+
+.pic-section{
+    height: 350px;
+    width: 350px;
+    background-color: grey;
+}
+
+.container {
+    width: 80%;
+    height: 200px;
+    margin: auto;
+    padding: 10px;
+  }
+
+.one {
+    width: 30%;
+    height: 200px;
+    background: white;
+    float: left;
+  }
+  
+  .two {
+    margin-left: 30%;
+    height: 200px;
+    background: white;
+  }
+
+.review-btn {
+    margin: 200px;
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px; 
+    line-height: 25px;
+    border-radius: 4px;
+    width: 500px;
+    background-color: dodgerblue;
+  }
