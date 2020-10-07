@@ -1,14 +1,23 @@
-import React from 'react';
+import React,  { useEffect, useState } from 'react';
 import './Filter.css';
 import { Route, Link } from "react-router-dom";
+import MoviesList from '../movieslist/MoviesList';
+import FavouritesContext from '../contexts/FavouriteContext';
 
-class Filter extends React.Component {
-render() {
+function Filter () {
+
+   var [movieName, setMovieName] = useState();
+
+   console.log("filter: " + movieName);
+
+   debugger;
     return (
+        <div>
       <div class="center-align">
         <div class = 'float-dev'>
             <label for="listfiltering">List Filtering</label>
-            <input id="list_filtering" name="listfiltering" type="text" />
+            <input id="list_filtering" name="listfiltering" type="text" onBlur={e => setMovieName(e.target.value)}  />
+            {/* <input id="list_filtering" name="listfiltering" type="text"  /> */}
         </div>
 
         <div>
@@ -45,8 +54,15 @@ render() {
             </select>
         </div>
       </div>
+      
+     
+     
+        <MoviesList movieName = {movieName}/>
+        <MoviesList />
+      
+      </div>
+
     );
-  }
 }
 
 export default Filter;

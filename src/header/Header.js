@@ -7,10 +7,12 @@ render() {
     return (
       <div>
           <div class="header">
-          <a href="#default" class="logo">TMDB Client</a>
+          <a href="#default" class="logo"><Link to={'/'}>TMDB Client</Link></a>
           <div class="header-right">
             <a class="active" href="#home">Home</a>
-            <a href="#favorites">Favorites</a>
+
+            <Link to={'/favorites/'}><a> Favorites</a></Link>
+            
             <a href="#upcomingmovies">Upcoming Movies</a>
             <a href="#search">Search</a>
           </div>

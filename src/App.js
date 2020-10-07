@@ -4,11 +4,12 @@ import './App.css';
 import { Route, Link } from "react-router-dom";
 import ReactDOM from "react-dom";
 import Header from './header/Header';
-import Filter from './filter/Filter';
 import MoviesList from './movieslist/MoviesList';
 import MovieDetails from './moviedetails/MovieDetails';
 import Home from './home/Home';
 import Review from './review/Review';
+import Favorites from './Favorites/Favorites';
+import FavouritesContext from './contexts/FavouriteContext';
 
 import {
   BrowserRouter as Router,
@@ -18,20 +19,25 @@ import {
 function App() {
   return (
     
+    <FavouritesContext.Provider value = {[]}>
     <Router>
-    <Switch>
-      <Route exact path="/">
-        <Home/>
-      </Route>
-      <Route 
-      path="/moviedetails/:movieId"
-      component={MovieDetails} />
-      <Route 
-      path="/Review/:movieId"
-      component={Review} />
-    </Switch>
-  </Router>
-  
+      <Switch>
+        <Route exact path="/">
+          <Home/>
+        </Route>
+        <Route exact path="/Favorites">
+          <Favorites/>
+        </Route>
+        <Route 
+        path="/moviedetails/:movieId"
+        component={MovieDetails} />
+        <Route 
+        path="/Review/:movieId"
+        component={Review} />
+      </Switch>
+    </Router>
+    </FavouritesContext.Provider>
+    
   );
 }
 
